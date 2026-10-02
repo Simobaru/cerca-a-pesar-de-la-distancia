@@ -15,9 +15,6 @@ const CONFIG = {
     dedication: "Aunque existan kilómetros entre nosotros, cada latido de mi corazón lleva tu nombre. Esta semana cada día tendrás un detalle, videos, audios y cartas especiales solo para ti."
   },
 
-  // Enlace a la Carpeta Madre de Google Drive
-  masterDriveFolder: "https://drive.google.com/drive/folders/12ICMoPJpIoeE8QrPMrNJz5WxQzzTY0zj?usp=sharing",
-
   // Frases de amor interactivas flotantes
   lovePhrases: [
     { text: "Te amo con toda mi alma ❤️", emoji: "💖" },

@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Elementos del DOM
   const daysContainer = document.getElementById("days-grid-container");
-  const masterDriveBtn = document.getElementById("master-drive-btn");
   const floatingPhrasesContainer = document.getElementById("floating-phrases-container");
   const stickersContainer = document.getElementById("stickers-container");
   const avatarCard = document.getElementById("alis-avatar-card");
