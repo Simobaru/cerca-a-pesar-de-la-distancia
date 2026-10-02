@@ -176,38 +176,102 @@ body {
 }
 
 /* --------------------------------------------------------------------------
-   3. AVATAR FLOTANTE & STICKERS DE ALIS Y ABRIL
+   3. AVATAR FLOTANTE & STICKERS DE ALIS, PRINCESA Y ABRIL
    -------------------------------------------------------------------------- */
 .avatar-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin: 10px 0 16px 0;
+  margin: 12px 0 16px 0;
+  width: 100%;
+}
+
+.characters-trio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  position: relative;
+}
+
+.character-sticker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  user-select: none;
+}
+
+.character-sticker:hover,
+.character-sticker:active {
+  transform: scale(1.12) rotate(4deg);
+}
+
+.character-princesa {
+  animation: float 4.5s infinite ease-in-out;
+}
+
+.character-abril {
+  animation: float 4.8s infinite ease-in-out 0.6s;
+}
+
+.sticker-img-wrap {
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 6px 12px rgba(255, 107, 139, 0.25));
+}
+
+.sticker-character-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.character-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--rose-hover);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--rose-light);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .avatar-wrapper {
   position: relative;
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%);
-  padding: 5px;
+  padding: 4px;
   box-shadow: 0 10px 25px rgba(255, 107, 139, 0.35);
-  animation: float 4s infinite ease-in-out;
+  animation: float 4s infinite ease-in-out 0.3s;
   cursor: pointer;
+  flex-shrink: 0;
 }
 
 .avatar-inner {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   border: 3px solid #FFFFFF;
+}
+
+.avatar-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .avatar-svg {
@@ -221,7 +285,7 @@ body {
   top: -16px;
   left: 50%;
   transform: translateX(-50%) rotate(-5deg);
-  font-size: 2rem;
+  font-size: 1.8rem;
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
   animation: crown-wobble 3s infinite ease-in-out;
 }
