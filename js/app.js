@@ -265,13 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Botón Maestro de Carpeta Drive
-  if (masterDriveBtn && window.CONFIG?.masterDriveFolder) {
-    masterDriveBtn.href = window.CONFIG.masterDriveFolder;
-    masterDriveBtn.addEventListener("click", () => {
-      showToast("📂 Abriendo Carpeta Madre con todas nuestras memorias...", "info");
-    });
-  }
+
 
   // -------------------------------------------------------------
   // 4. MODAL DE CONTRASEÑA & NORMALIZACIÓN TOLERANTE
@@ -534,11 +528,85 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // -------------------------------------------------------------
-  // 8. INICIALIZACIÓN
+  // 8. NIEVE DE PALABRAS Y APODOS DE SIMÓN & ALI
+  // -------------------------------------------------------------
+  function initFallingWordsSnow() {
+    const snowContainer = document.getElementById("falling-words-container");
+    if (!snowContainer) return;
+
+    const romanticWords = [
+      "chona",
+      "mi amor",
+      "groserota",
+      "preciosa",
+      "te amo",
+      "me fascinas",
+      "me encantas",
+      "te odio",
+      "chiquita",
+      "aureliano",
+      "mi princesa 👑",
+      "siempre juntos 💕",
+      "te adoro ✨",
+      "me haces falta 🥺"
+    ];
+
+    const colors = [
+      "#FF5A82",
+      "#E84393",
+      "#FD79A8",
+      "#6C5CE7",
+      "#A29BFE",
+      "#D63031",
+      "#E17055"
+    ];
+
+    function spawnWord() {
+      if (document.hidden) return;
+
+      const word = document.createElement("div");
+      word.className = "falling-word-item";
+      
+      const randomText = romanticWords[Math.floor(Math.random() * romanticWords.length)];
+      word.textContent = randomText;
+
+      const leftPercent = Math.random() * 92 + 4; // entre 4% y 96%
+      const duration = Math.random() * 7 + 9; // 9s a 16s de caída suave
+      const drift = (Math.random() * 60 - 30) + "px";
+      const rotation = (Math.random() * 24 - 12) + "deg";
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+      const randomSize = (Math.random() * 0.35 + 0.95) + "rem";
+
+      word.style.left = `${leftPercent}%`;
+      word.style.animationDuration = `${duration}s`;
+      word.style.setProperty("--drift", drift);
+      word.style.setProperty("--rot", rotation);
+      word.style.color = randomColor;
+      word.style.fontSize = randomSize;
+
+      snowContainer.appendChild(word);
+
+      setTimeout(() => {
+        word.remove();
+      }, duration * 1000 + 500);
+    }
+
+    // Generar algunas palabras iniciales distribuidas
+    for (let i = 0; i < 6; i++) {
+      setTimeout(spawnWord, i * 400);
+    }
+
+    // Intervalo constante de caída de palabras (~cada 1.4 segundos)
+    setInterval(spawnWord, 1400);
+  }
+
+  // -------------------------------------------------------------
+  // 9. INICIALIZACIÓN
   // -------------------------------------------------------------
   renderDays();
   renderFloatingPhrases();
   renderStickers();
+  initFallingWordsSnow();
 
   // Saludo cariñoso inicial tras cargar
   setTimeout(() => {

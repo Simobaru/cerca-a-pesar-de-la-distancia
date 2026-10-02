@@ -79,6 +79,57 @@ body {
   opacity: 0.9;
 }
 
+/* --------------------------------------------------------------------------
+   NIEVE DE PALABRAS DE AMOR Y APODOS FLOTANTES
+   -------------------------------------------------------------------------- */
+.falling-words-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.falling-word-item {
+  position: absolute;
+  top: -50px;
+  font-family: 'Caveat', 'Patrick Hand', 'Comic Neue', cursive, sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #FF5A82;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 3px 12px;
+  border-radius: 20px;
+  border: 1.5px solid rgba(255, 182, 197, 0.45);
+  box-shadow: 0 4px 12px rgba(255, 107, 139, 0.12);
+  white-space: nowrap;
+  animation: fallDownSnow linear infinite;
+  user-select: none;
+  letter-spacing: 0.3px;
+}
+
+@keyframes fallDownSnow {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  88% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(106vh) translateX(var(--drift, 25px)) rotate(var(--rot, 12deg));
+    opacity: 0;
+  }
+}
+
 /* Contenedor Principal Mobile-First */
 .app-container {
   width: 100%;
