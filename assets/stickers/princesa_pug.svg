@@ -1,0 +1,282 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Sombra de Sticker -->
+    <filter id="sticker-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#b08b8b" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+    
+    <!-- Filtro de brillo suave -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Gradientes de Color -->
+    <linearGradient id="pugBody" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCE6C9"/>
+      <stop offset="100%" stop-color="#E5C39B"/>
+    </linearGradient>
+
+    <linearGradient id="pugEar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4A3B32"/>
+      <stop offset="100%" stop-color="#2D231E"/>
+    </linearGradient>
+
+    <linearGradient id="pugMuzzle" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3D2E26"/>
+      <stop offset="100%" stop-color="#251B16"/>
+    </linearGradient>
+
+    <linearGradient id="collarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6584"/>
+      <stop offset="50%" stop-color="#FF8DA1"/>
+      <stop offset="100%" stop-color="#FF5277"/>
+    </linearGradient>
+
+    <linearGradient id="goldHeart" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE066"/>
+      <stop offset="50%" stop-color="#FFD13B"/>
+      <stop offset="100%" stop-color="#FFAE00"/>
+    </linearGradient>
+
+    <linearGradient id="tongueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FF8EAA"/>
+      <stop offset="100%" stop-color="#FF5B84"/>
+    </linearGradient>
+
+    <linearGradient id="eyeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2A1E1E"/>
+      <stop offset="100%" stop-color="#0E0B0B"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#sticker-shadow)">
+    <!-- Borde Blanco Grueso de Pegatina / Die-cut Sticker Base -->
+    <!-- Contorno envolvente general -->
+    <path d="M 120 100 
+             C 100 60, 60 110, 75 165 
+             C 65 210, 85 270, 110 320 
+             C 95 360, 105 420, 150 445 
+             C 185 465, 325 465, 360 445 
+             C 405 420, 415 360, 400 320 
+             C 425 270, 445 210, 435 165 
+             C 450 110, 410 60, 390 100 
+             C 340 70, 170 70, 120 100 Z" 
+          fill="#FFFFFF" 
+          stroke="#FFFFFF" 
+          stroke-width="26" 
+          stroke-linejoin="round" 
+          stroke-linecap="round"/>
+
+    <!-- Estrellitas de Brillo Externas (Kawaii Sparkles) dentro del sticker -->
+    <path d="M 80 90 Q 80 110 70 110 Q 80 110 80 130 Q 80 110 90 110 Q 80 110 80 90 Z" fill="#FFE57F"/>
+    <path d="M 430 100 Q 430 120 420 120 Q 430 120 430 140 Q 430 120 440 120 Q 430 120 430 100 Z" fill="#FF8DA1"/>
+    <circle cx="445" cy="150" r="6" fill="#FFE57F"/>
+    <circle cx="65" cy="140" r="5" fill="#FFB7C5"/>
+
+    <!-- ================= CUERPO Y PATITAS ================= -->
+    <g id="pug-body">
+      <!-- Cuerpo base -->
+      <path d="M 160 330 C 140 370, 145 420, 185 435 C 220 445, 290 445, 325 435 C 365 420, 370 370, 350 330 Z" fill="url(#pugBody)"/>
+      <!-- Pancita tierna con tono más clarito -->
+      <ellipse cx="256" cy="385" rx="65" ry="40" fill="#FFF2E2" opacity="0.8"/>
+      
+      <!-- Patitas Delanteras con almohadillas -->
+      <!-- Pata Izquierda -->
+      <g id="left-paw">
+        <ellipse cx="195" cy="425" rx="30" ry="22" fill="#E5C39B"/>
+        <ellipse cx="195" cy="423" rx="27" ry="19" fill="#FFF2E2"/>
+        <circle cx="185" cy="428" r="5" fill="#C9A078"/>
+        <circle cx="195" cy="431" r="5.5" fill="#C9A078"/>
+        <circle cx="205" cy="428" r="5" fill="#C9A078"/>
+        <ellipse cx="195" cy="420" rx="10" ry="7" fill="#C9A078"/>
+      </g>
+
+      <!-- Pata Derecha -->
+      <g id="right-paw">
+        <ellipse cx="317" cy="425" rx="30" ry="22" fill="#E5C39B"/>
+        <ellipse cx="317" cy="423" rx="27" ry="19" fill="#FFF2E2"/>
+        <circle cx="307" cy="428" r="5" fill="#C9A078"/>
+        <circle cx="317" cy="431" r="5.5" fill="#C9A078"/>
+        <circle cx="327" cy="428" r="5" fill="#C9A078"/>
+        <ellipse cx="317" cy="420" rx="10" ry="7" fill="#C9A078"/>
+      </g>
+    </g>
+
+    <!-- ================= OREJAS (Detrás de la cabeza) ================= -->
+    <!-- Oreja Izquierda caidita (Pug button ear) -->
+    <path d="M 160 145 C 120 110, 85 140, 95 200 C 102 245, 140 250, 158 220 Z" 
+          fill="url(#pugEar)"/>
+    <path d="M 150 155 C 125 130, 105 155, 110 200 C 115 230, 140 230, 150 210 Z" 
+          fill="#5D4C42" opacity="0.6"/>
+
+    <!-- Oreja Derecha caidita -->
+    <path d="M 352 145 C 392 110, 427 140, 417 200 C 410 245, 372 250, 354 220 Z" 
+          fill="url(#pugEar)"/>
+    <path d="M 362 155 C 387 130, 407 155, 402 200 C 397 230, 372 230, 362 210 Z" 
+          fill="#5D4C42" opacity="0.6"/>
+
+    <!-- ================= CABEZA ================= -->
+    <!-- Forma redondita y tierna de cabeza de Pug -->
+    <ellipse cx="256" cy="225" rx="135" ry="115" fill="url(#pugBody)"/>
+
+    <!-- Pliegues / Arruguitas características de Pug (Super Kawaii) -->
+    <path d="M 235 145 Q 256 135 277 145" stroke="#CCA780" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M 225 165 Q 256 150 287 165" stroke="#CCA780" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+    <path d="M 240 185 Q 256 175 272 185" stroke="#CCA780" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Mancha / Máscara negra del hocico amplia y suave -->
+    <path d="M 256 200 
+             C 210 200, 175 235, 175 285 
+             C 175 325, 215 345, 256 345 
+             C 297 345, 337 325, 337 285 
+             C 337 235, 302 200, 256 200 Z" 
+          fill="url(#pugMuzzle)"/>
+
+    <!-- ================= OJITOS ENORMES KAWAII ================= -->
+    <!-- Ojo Izquierdo -->
+    <g id="left-eye">
+      <!-- Fondo / Esclera con sombra suave -->
+      <circle cx="190" cy="235" r="32" fill="url(#eyeGrad)"/>
+      <circle cx="190" cy="235" r="32" stroke="#251B16" stroke-width="2"/>
+      
+      <!-- Iris marrón cálido profundo -->
+      <circle cx="190" cy="235" r="28" fill="#3D2314"/>
+      <circle cx="190" cy="235" r="24" fill="#1A0F0A"/>
+      
+      <!-- Destellos de luz adorables (Anime sparkles) -->
+      <circle cx="180" cy="223" r="11" fill="#FFFFFF"/>
+      <circle cx="202" cy="245" r="5.5" fill="#FFFFFF"/>
+      <circle cx="178" cy="243" r="3" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Ojo Derecho -->
+    <g id="right-eye">
+      <!-- Fondo / Esclera -->
+      <circle cx="322" cy="235" r="32" fill="url(#eyeGrad)"/>
+      <circle cx="322" cy="235" r="32" stroke="#251B16" stroke-width="2"/>
+      
+      <!-- Iris marrón cálido -->
+      <circle cx="322" cy="235" r="28" fill="#3D2314"/>
+      <circle cx="322" cy="235" r="24" fill="#1A0F0A"/>
+      
+      <!-- Destellos de luz -->
+      <circle cx="312" cy="223" r="11" fill="#FFFFFF"/>
+      <circle cx="334" cy="245" r="5.5" fill="#FFFFFF"/>
+      <circle cx="310" cy="243" r="3" fill="#FFFFFF"/>
+    </g>
+
+    <!-- ================= MEJILLAS SONROJADAS (BLUSH) ================= -->
+    <ellipse cx="145" cy="285" rx="20" ry="12" fill="#FF8DA1" opacity="0.65"/>
+    <ellipse cx="367" cy="285" rx="20" ry="12" fill="#FF8DA1" opacity="0.65"/>
+    <!-- Pequeñas estrellitas o líneas en las mejillas -->
+    <path d="M 137 285 L 153 285 M 145 277 L 145 293" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 359 285 L 375 285 M 367 277 L 367 293" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- ================= NARICITA Y HOCICO ================= -->
+    <!-- Nariz de Pug con forma de corazoncito invertido -->
+    <path d="M 242 258 
+             C 242 252, 248 248, 256 248 
+             C 264 248, 270 252, 270 258 
+             C 270 268, 259 275, 256 276 
+             C 253 275, 242 268, 242 258 Z" 
+          fill="#110D0B"/>
+    <!-- Brillo en la nariz -->
+    <ellipse cx="252" cy="254" rx="4" ry="2.5" fill="#FFFFFF" opacity="0.7"/>
+    <ellipse cx="260" cy="255" rx="2" ry="1.5" fill="#FFFFFF" opacity="0.7"/>
+
+    <!-- Línea media de boca -->
+    <path d="M 256 276 L 256 288" stroke="#110D0B" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- Lenguita tierna afuera (Blep) -->
+    <g id="tongue">
+      <path d="M 246 295 
+               C 246 325, 268 325, 268 295 Z" 
+            fill="url(#tongueGrad)" 
+            stroke="#E04368" 
+            stroke-width="2"/>
+      <path d="M 257 295 L 257 314" stroke="#D83258" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Brillo de la lenguita -->
+      <ellipse cx="252" cy="308" rx="2.5" ry="4" fill="#FFFFFF" opacity="0.6"/>
+    </g>
+
+    <!-- Labios / Mofletes superiores sonrientes -->
+    <path d="M 226 286 Q 242 300 256 288 Q 270 300 286 286" 
+          stroke="#110D0B" 
+          stroke-width="4.5" 
+          stroke-linecap="round" 
+          fill="none"/>
+
+    <!-- Lunarcitos de bigotes -->
+    <circle cx="218" cy="285" r="2.5" fill="#1A120E"/>
+    <circle cx="210" cy="292" r="2.5" fill="#1A120E"/>
+    <circle cx="220" cy="298" r="2.5" fill="#1A120E"/>
+    <circle cx="294" cy="285" r="2.5" fill="#1A120E"/>
+    <circle cx="302" cy="292" r="2.5" fill="#1A120E"/>
+    <circle cx="292" cy="298" r="2.5" fill="#1A120E"/>
+
+    <!-- ================= COLLAR ROSADO Y DIJE DE CORAZÓN ================= -->
+    <g id="collar-princesa">
+      <!-- Cinta del collar -->
+      <path d="M 180 340 Q 256 368 332 340" 
+            stroke="url(#collarGrad)" 
+            stroke-width="16" 
+            stroke-linecap="round" 
+            fill="none"/>
+      <path d="M 180 340 Q 256 368 332 340" 
+            stroke="#FFFFFF" 
+            stroke-width="3" 
+            stroke-dasharray="6,6"
+            stroke-linecap="round" 
+            fill="none" 
+            opacity="0.7"/>
+
+      <!-- Argolla del dije -->
+      <circle cx="256" cy="360" r="6" fill="none" stroke="#FFAE00" stroke-width="3.5"/>
+
+      <!-- Dije de Corazón Dorado Brillante -->
+      <g transform="translate(256, 380) scale(1.15)">
+        <!-- Corazón -->
+        <path d="M 0 -8 
+                 C 0 -15, -14 -15, -14 -4 
+                 C -14 5, 0 16, 0 16 
+                 C 0 16, 14 5, 14 -4 
+                 C 14 -15, 0 -15, 0 -8 Z" 
+              fill="url(#goldHeart)" 
+              stroke="#D68B00" 
+              stroke-width="2"/>
+        <!-- Detalle de Flor / Huellita en el dije -->
+        <circle cx="0" cy="-2" r="3" fill="#FFFFFF" opacity="0.9"/>
+        <circle cx="-3" cy="-5" r="1.8" fill="#FFFFFF" opacity="0.8"/>
+        <circle cx="3" cy="-5" r="1.8" fill="#FFFFFF" opacity="0.8"/>
+        <circle cx="0" cy="3" r="1.8" fill="#FFFFFF" opacity="0.8"/>
+        <!-- Destello en el corazón -->
+        <circle cx="-7" cy="-7" r="2" fill="#FFFFFF" opacity="0.9"/>
+      </g>
+    </g>
+
+    <!-- Corona pequeña de Princesa en la cabeza -->
+    <g id="mini-tiara" transform="translate(256, 118) scale(0.9)">
+      <path d="M -30 10 L -35 -10 L -15 0 L 0 -22 L 15 0 L 35 -10 L 30 10 Z" 
+            fill="url(#goldHeart)" 
+            stroke="#D68B00" 
+            stroke-width="2.5" 
+            stroke-linejoin="round"/>
+      <!-- Gemas rosadas en la tiara -->
+      <circle cx="0" cy="-14" r="3.5" fill="#FF5277"/>
+      <circle cx="-28" cy="-5" r="2.8" fill="#FF5277"/>
+      <circle cx="28" cy="-5" r="2.8" fill="#FF5277"/>
+      <circle cx="-15" cy="4" r="2.2" fill="#FFFFFF"/>
+      <circle cx="0" cy="4" r="2.2" fill="#FFFFFF"/>
+      <circle cx="15" cy="4" r="2.2" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Texto o Etiqueta 'Princesa' sutil en estilo ribbon o badge (Opcional, muy chic) -->
+    <g id="badge-name" transform="translate(256, 465)">
+      <rect x="-65" y="-14" width="130" height="26" rx="13" fill="#FF6584" stroke="#FFFFFF" stroke-width="3"/>
+      <text x="0" y="4" font-family="'Quicksand', 'Nunito', 'Segoe UI', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">PRINCESA</text>
+    </g>
+
+  </g>
+</svg>

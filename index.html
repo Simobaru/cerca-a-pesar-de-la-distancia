@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#FF6B8B" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="Cerca a pesar de la distancia - Dedicado con todo el amor de Simón para Ali ❤️" />
+  <title>Hola mi amor ❤️ | Cerca a pesar de la distancia</title>
+
+  <!-- Google Fonts para una tipografía romántica y suave -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700;800&family=Caveat:wght@700&display=swap" rel="stylesheet" />
+
+  <!-- Estilos Mobile-First -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Fondo ambiental romántico -->
+  <div class="ambient-background" aria-hidden="true"></div>
+
+  <!-- Contenedor Principal de la App -->
+  <main class="app-container">
+
+    <!-- 1. HERO HEADER ROMÁNTICO -->
+    <header class="hero-header">
+      <div class="hero-badge-top">
+        <span>✨</span>
+        <span>Para la niña más hermosa de mi vida</span>
+        <span>✨</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span>Hola mi amor</span>
+        <span class="heart-beat">❤️</span>
+      </h1>
+
+      <h2 class="hero-subtitle">Cerca a pesar de la distancia</h2>
+      <div class="hero-dedication-tag">Dedicatoria de Simón para Ali</div>
+
+      <!-- AVATAR ILUSTRADO DE ALIS Y STICKERS DE PRINCESA & ABRIL -->
+      <section class="avatar-section">
+        <div class="characters-trio">
+          <!-- Sticker Princesa (Pug) -->
+          <div class="character-sticker character-princesa" title="Princesa (Pug) 🐾">
+            <div class="sticker-img-wrap">
+              <img src="assets/stickers/princesa_pug.svg" alt="Princesa Pug" class="sticker-character-img" />
+            </div>
+            <span class="character-label">Princesa 🐶</span>
+          </div>
+
+          <!-- Avatar Central de Alis con Corona -->
+          <div class="avatar-wrapper" id="alis-avatar-card" title="¡Mi niña hermosa! ❤️">
+            <div class="avatar-crown">👑</div>
+            <div class="avatar-inner">
+              <img src="assets/caricatura_alis.png" alt="Ali Hermosa" class="avatar-photo" onerror="this.style.display='none'; document.getElementById('avatar-svg-fallback').style.display='block';" />
+              <!-- Fallback SVG si la imagen tarda en cargar -->
+              <svg id="avatar-svg-fallback" class="avatar-svg" style="display:none;" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="60" cy="62" rx="42" ry="46" fill="#6B3A2A" />
+                <path d="M22 65C18 85 24 105 32 115C36 100 38 85 36 70Z" fill="#542B1E" />
+                <path d="M98 65C102 85 96 105 88 115C84 100 82 85 84 70Z" fill="#542B1E" />
+                <ellipse cx="60" cy="62" rx="30" ry="32" fill="#FFE0BD" />
+                <path d="M34 50C42 42 55 42 60 48C65 42 78 42 86 50C78 46 68 46 60 52C52 46 42 46 34 50Z" fill="#6B3A2A" />
+                <circle cx="44" cy="68" r="6" fill="#FFAAA6" opacity="0.65" />
+                <circle cx="76" cy="68" r="6" fill="#FFAAA6" opacity="0.65" />
+                <ellipse cx="46" cy="60" rx="4.5" ry="5.5" fill="#3D2314" />
+                <ellipse cx="74" cy="60" rx="4.5" ry="5.5" fill="#3D2314" />
+                <circle cx="44.5" cy="58.5" r="2" fill="#FFFFFF" />
+                <circle cx="47.5" cy="61.5" r="0.9" fill="#FFFFFF" />
+                <circle cx="72.5" cy="58.5" r="2" fill="#FFFFFF" />
+                <circle cx="75.5" cy="61.5" r="0.9" fill="#FFFFFF" />
+                <path d="M42 54C44 52 48 53 50 54" stroke="#3D2314" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M70 54C72 52 76 53 78 54" stroke="#3D2314" stroke-width="1.8" stroke-linecap="round" />
+                <path d="M52 70C55 75 65 75 68 70" stroke="#D84A65" stroke-width="2.2" stroke-linecap="round" fill="none" />
+                <path d="M52 92C56 96 64 96 68 92" stroke="#FFD700" stroke-width="1.5" fill="none" />
+                <path d="M60 94L58 97C58 99 62 99 62 97L60 94Z" fill="#F43F5E" />
+                <path d="M38 98C46 90 74 90 82 98L88 120H32L38 98Z" fill="#FF8FA3" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Sticker Abril (Llama) -->
+          <div class="character-sticker character-abril" title="Abril (Llama) 🦙">
+            <div class="sticker-img-wrap">
+              <img src="assets/stickers/abril_llama.svg" alt="Abril Llama" class="sticker-character-img" />
+            </div>
+            <span class="character-label">Abril 🦙</span>
+          </div>
+        </div>
+
+        <!-- Stickers interactivos flotantes -->
+        <div class="stickers-cloud" id="stickers-container">
+          <!-- Generado dinámicamente desde config.js -->
+        </div>
+      </section>
+
+      <p class="hero-description">
+        Aunque existan kilómetros entre nosotros, cada latido de mi corazón lleva tu nombre. Esta semana cada día tendrás un detalle, videos, audios y cartas especiales solo para ti.
+      </p>
+    </header>
+
+    <!-- 2. BARRA DE PROGRESO DE AMOR -->
+    <section class="love-progress-card">
+      <div class="progress-header">
+        <span class="progress-title">
+          <span>💖</span>
+          <span>Nuestra Aventura Juntos</span>
+        </span>
+        <span class="progress-count" id="love-progress-count">0/7 Días</span>
+      </div>
+      <div class="progress-bar-track">
+        <div class="progress-bar-fill" id="love-progress-bar"></div>
+      </div>
+      <p class="progress-footer-text" id="love-progress-text">
+        Toca cualquier día para desbloquearlo 💕
+      </p>
+    </section>
+
+    <!-- 3. FRASES DE AMOR FLOTANTES INTERACTIVAS -->
+    <section class="floating-phrases-section">
+      <div class="floating-phrases-scroll" id="floating-phrases-container">
+        <!-- Renderizado dinámicamente desde config.js -->
+      </div>
+    </section>
+
+    <!-- 4. BOTÓN CARPETA MADRE DE DRIVE -->
+    <section class="master-drive-banner">
+      <a href="#" id="master-drive-btn" target="_blank" rel="noopener noreferrer" class="btn-master-drive">
+        <div class="master-drive-content">
+          <span class="master-drive-icon">📂</span>
+          <div class="master-drive-text">
+            <strong>Carpeta Madre de Drive</strong>
+            <small>Todas nuestras fotos, videos y audios completos</small>
+          </div>
+        </div>
+        <span class="btn-arrow">➔</span>
+      </a>
+    </section>
+
+    <!-- 5. GRID VERTICAL DE 7 TARJETAS DIARIAS -->
+    <section class="days-section">
+      <div class="section-title-wrap">
+        <h3 class="section-title">
+          <span>💌</span>
+          <span>Tus Sorpresas de Cada Día</span>
+          <span>✨</span>
+        </h3>
+        <p class="section-subtitle">Ingresa la clave secreta para abrir cada mensaje</p>
+      </div>
+
+      <div class="days-grid" id="days-grid-container">
+        <!-- Generado dinámicamente por app.js -->
+      </div>
+    </section>
+
+    <!-- FOOTER ROMÁNTICO -->
+    <footer class="app-footer">
+      <p>Hecho con todo mi amor <span class="footer-heart">❤️</span> para Ali</p>
+      <p><small>Simón & Ali • Siempre juntos sin importar la distancia ✈️💫</small></p>
+    </footer>
+
+  </main>
+
+  <!-- 6. REPRODUCTOR DE MÚSICA ROMÁNTICA FLOTANTE -->
+  <aside class="floating-music-widget" id="floating-music-player">
+    <button type="button" class="music-play-circle" id="music-play-btn" aria-label="Reproducir música romántica">
+      ▶️
+    </button>
+    <div class="music-info" id="music-floating-toggle">
+      <span class="music-title">Melodía para Ali 🎶</span>
+      <div class="music-controls-row">
+        <input type="range" class="volume-slider" id="music-volume-slider" min="0" max="100" value="60" title="Volumen" />
+        <div class="music-equalizer" id="music-equalizer">
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+          <span class="eq-bar"></span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 7. MODAL INTERACTIVO PARA INGRESAR CONTRASEÑA -->
+  <div class="modal-overlay" id="password-modal" aria-hidden="true" role="dialog">
+    <div class="modal-card password-modal-content">
+      <button type="button" class="modal-close-icon" id="password-modal-close" aria-label="Cerrar modal">✕</button>
+      
+      <div class="modal-header-center">
+        <div class="modal-icon-badge" id="pw-modal-day-icon">🔒</div>
+        <h3 class="modal-title" id="pw-modal-title">Desbloquear Día</h3>
+        <p class="modal-subtitle">Escribe la palabra secreta que te dejó Simón</p>
+      </div>
+
+      <div class="password-form">
+        <div class="password-input-wrapper">
+          <input 
+            type="password" 
+            id="password-input" 
+            class="password-input" 
+            placeholder="Escribe la clave aquí..." 
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+          />
+          <button type="button" class="password-toggle-btn" id="password-toggle-visibility" title="Mostrar/Ocultar contraseña">
+            👁️
+          </button>
+        </div>
+
+        <div class="hint-section">
+          <button type="button" class="hint-toggle-btn" id="pw-modal-hint-toggle">
+            Ver pista de Simón 💡
+          </button>
+          <div class="hint-box" id="pw-modal-hint-container">
+            <span id="pw-modal-hint-text">Pista cariñosa</span>
+          </div>
+        </div>
+
+        <!-- Teclado en pantalla y atajos rápidos -->
+        <div class="quick-keypad">
+          <button type="button" class="keypad-btn" data-key="1">1</button>
+          <button type="button" class="keypad-btn" data-key="2">2</button>
+          <button type="button" class="keypad-btn" data-key="3">3</button>
+          <button type="button" class="keypad-btn" data-key="4">4</button>
+          <button type="button" class="keypad-btn" data-key="5">5</button>
+          <button type="button" class="keypad-btn" data-key="6">6</button>
+          <button type="button" class="keypad-btn" data-key="7">7</button>
+          <button type="button" class="keypad-btn" data-key="backspace">⌫</button>
+          <button type="button" class="keypad-btn" data-key="clear">Borrar</button>
+        </div>
+
+        <div class="password-feedback" id="password-feedback"></div>
+
+        <button type="button" class="btn btn-primary btn-submit-pw" id="password-submit-btn">
+          <span>Verificar y Abrir 💖</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. MODAL DE CONTENIDO DESBLOQUEADO (CARTA & ENLACE DE DRIVE) -->
+  <div class="modal-overlay" id="unlocked-modal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button type="button" class="modal-close-icon" id="un-modal-close-btn" aria-label="Cerrar carta">✕</button>
+
+      <div class="modal-header-center">
+        <div class="modal-icon-badge" id="un-modal-icon">💌</div>
+        <h3 class="modal-title" id="un-modal-title">Mensaje de Simón</h3>
+        <p class="modal-subtitle" id="un-modal-subtitle">Para mi hermosa Ali</p>
+      </div>
+
+      <!-- Carta de amor formateada -->
+      <div class="letter-content-box" id="un-modal-letter">
+        <!-- Rellenado dinámicamente -->
+      </div>
+
+      <div class="modal-action-vertical">
+        <a href="#" id="un-modal-drive-link" target="_blank" rel="noopener noreferrer" class="btn btn-drive-large">
+          <span>🎬 Ver Videos y Audios de Hoy en Drive 📂</span>
+        </a>
+
+        <button type="button" class="btn-relock" id="un-modal-relock-btn">
+          🔒 Volver a bloquear este día (para probar de nuevo)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9. CONTENEDOR DE TOASTS TIERNOS -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/config.js"></script>
+  <script src="js/confetti.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

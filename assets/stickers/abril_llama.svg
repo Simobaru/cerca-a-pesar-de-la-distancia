@@ -1,0 +1,294 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Sombra de Pegatina (Sticker Effect) -->
+    <filter id="llama-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#a390a8" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+
+    <!-- Gradientes de Lana y Colores Pastel -->
+    <linearGradient id="llamaWool" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#FAF5EE"/>
+      <stop offset="100%" stop-color="#EFE6D8"/>
+    </linearGradient>
+
+    <linearGradient id="llamaSnout" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9F2"/>
+      <stop offset="100%" stop-color="#F2E3D0"/>
+    </linearGradient>
+
+    <linearGradient id="scarfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF9AA2"/>
+      <stop offset="35%" stop-color="#FFB7B2"/>
+      <stop offset="70%" stop-color="#B5EAD7"/>
+      <stop offset="100%" stop-color="#C7CEEA"/>
+    </linearGradient>
+
+    <linearGradient id="flowerPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF8DA1"/>
+      <stop offset="100%" stop-color="#FF5277"/>
+    </linearGradient>
+
+    <linearGradient id="flowerYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF394"/>
+      <stop offset="100%" stop-color="#FFD13B"/>
+    </linearGradient>
+
+    <linearGradient id="flowerLavender" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2D4F0"/>
+      <stop offset="100%" stop-color="#B39DDB"/>
+    </linearGradient>
+
+    <linearGradient id="flowerMint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B9F6CA"/>
+      <stop offset="100%" stop-color="#69F0AE"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#llama-shadow)">
+    <!-- Borde Blanco Grueso de Pegatina / Die-cut Base -->
+    <path d="M 210 70 
+             C 170 30, 130 90, 150 140 
+             C 120 180, 130 250, 160 300 
+             C 140 340, 120 400, 160 445 
+             C 200 470, 310 470, 350 445 
+             C 390 400, 370 340, 350 300 
+             C 380 250, 390 180, 360 140 
+             C 380 90, 340 30, 300 70 
+             C 270 50, 240 50, 210 70 Z" 
+          fill="#FFFFFF" 
+          stroke="#FFFFFF" 
+          stroke-width="26" 
+          stroke-linejoin="round" 
+          stroke-linecap="round"/>
+
+    <!-- Destellos Mágicos y Corazoncitos Flotantes en el borde del sticker -->
+    <!-- Corazoncito pastel izquierdo -->
+    <path d="M 90 200 C 90 188, 76 188, 76 198 C 76 206, 90 216, 90 216 C 90 216, 104 206, 104 198 C 104 188, 90 188, 90 200 Z" fill="#FF9AA2"/>
+    <!-- Corazoncito pastel derecho -->
+    <path d="M 420 220 C 420 208, 406 208, 406 218 C 406 226, 420 236, 420 236 C 420 236, 434 226, 434 218 C 434 208, 420 208, 420 220 Z" fill="#B5EAD7"/>
+    <!-- Estrellitas -->
+    <path d="M 105 130 Q 105 145 95 145 Q 105 145 105 160 Q 105 145 115 145 Q 105 145 105 130 Z" fill="#FFE066"/>
+    <path d="M 405 135 Q 405 150 395 150 Q 405 150 405 165 Q 405 150 415 150 Q 405 150 405 135 Z" fill="#FFB7B2"/>
+
+    <!-- ================= OREJAS DE LLAMITA ================= -->
+    <!-- Oreja Izquierda -->
+    <g id="left-ear">
+      <path d="M 185 150 C 150 110, 155 50, 185 65 C 205 75, 215 125, 205 155 Z" fill="url(#llamaWool)" stroke="#EADDCB" stroke-width="2"/>
+      <!-- Interior rosadito -->
+      <path d="M 183 138 C 162 108, 166 68, 184 76 C 196 83, 202 118, 196 140 Z" fill="#FFB7C5" opacity="0.8"/>
+    </g>
+
+    <!-- Oreja Derecha -->
+    <g id="right-ear">
+      <path d="M 327 150 C 362 110, 357 50, 327 65 C 307 75, 297 125, 307 155 Z" fill="url(#llamaWool)" stroke="#EADDCB" stroke-width="2"/>
+      <!-- Interior rosadito -->
+      <path d="M 329 138 C 350 108, 346 68, 328 76 C 316 83, 310 118, 316 140 Z" fill="#FFB7C5" opacity="0.8"/>
+    </g>
+
+    <!-- ================= CUERPO Y CUELLO ESPONJOSO ================= -->
+    <!-- Cuello / Tronco esponjoso -->
+    <g id="llama-body">
+      <!-- Nubes de lana del cuerpo -->
+      <path d="M 195 240 
+               C 170 280, 160 360, 175 420 
+               C 195 450, 315 450, 335 420 
+               C 350 360, 340 280, 317 240 Z" 
+            fill="url(#llamaWool)"/>
+
+      <!-- Bolitas esponjosas en los lados del pecho -->
+      <circle cx="180" cy="380" r="28" fill="#F4ECE1"/>
+      <circle cx="210" cy="415" r="26" fill="#F4ECE1"/>
+      <circle cx="256" cy="425" r="28" fill="#F4ECE1"/>
+      <circle cx="302" cy="415" r="26" fill="#F4ECE1"/>
+      <circle cx="332" cy="380" r="28" fill="#F4ECE1"/>
+
+      <circle cx="185" cy="375" r="26" fill="url(#llamaWool)"/>
+      <circle cx="210" cy="410" r="24" fill="url(#llamaWool)"/>
+      <circle cx="256" cy="420" r="26" fill="url(#llamaWool)"/>
+      <circle cx="302" cy="410" r="24" fill="url(#llamaWool)"/>
+      <circle cx="327" cy="375" r="26" fill="url(#llamaWool)"/>
+    </g>
+
+    <!-- ================= PAÑOLITO / BUFANDA ANDINA PASTEL ================= -->
+    <g id="bandana-llama">
+      <!-- Pañuelo triangular doblado -->
+      <path d="M 180 305 
+               Q 256 345 332 305 
+               Q 295 385 256 395 
+               Q 215 385 180 305 Z" 
+            fill="url(#scarfGrad)" 
+            stroke="#FFFFFF" 
+            stroke-width="3"/>
+      
+      <!-- Diseños geométricos étnicos kawaii en el pañuelo -->
+      <!-- Línea zigzag -->
+      <path d="M 205 328 L 213 320 L 221 328 L 229 320 L 237 328 L 245 320 L 253 328 L 261 320 L 269 328 L 277 320 L 285 328 L 293 320 L 301 328 L 309 320" 
+            stroke="#FFFFFF" 
+            stroke-width="2.5" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            fill="none"/>
+
+      <!-- Pompones colgantes de colores pastel -->
+      <line x1="210" y1="335" x2="210" y2="350" stroke="#E57373" stroke-width="2"/>
+      <circle cx="210" cy="353" r="6" fill="#FF8DA1"/>
+
+      <line x1="233" y1="350" x2="233" y2="367" stroke="#BA68C8" stroke-width="2"/>
+      <circle cx="233" cy="370" r="6.5" fill="#CE93D8"/>
+
+      <line x1="256" y1="365" x2="256" y2="385" stroke="#FFB74D" stroke-width="2.5"/>
+      <circle cx="256" cy="389" r="8" fill="#FFD54F"/>
+
+      <line x1="279" y1="350" x2="279" y2="367" stroke="#4DB6AC" stroke-width="2"/>
+      <circle cx="279" cy="370" r="6.5" fill="#80CBC4"/>
+
+      <line x1="302" y1="335" x2="302" y2="350" stroke="#64B5F6" stroke-width="2"/>
+      <circle cx="302" cy="353" r="6" fill="#90CAF9"/>
+    </g>
+
+    <!-- ================= CABEZA ESPONJOSA ================= -->
+    <!-- Lana alrededor de la cabeza como una nube -->
+    <g id="cloud-head">
+      <!-- Cúmulos de lana para dar forma ultra-fluffy -->
+      <circle cx="180" cy="180" r="42" fill="url(#llamaWool)"/>
+      <circle cx="180" cy="230" r="40" fill="url(#llamaWool)"/>
+      <circle cx="332" cy="180" r="42" fill="url(#llamaWool)"/>
+      <circle cx="332" cy="230" r="40" fill="url(#llamaWool)"/>
+      <circle cx="210" cy="135" r="42" fill="url(#llamaWool)"/>
+      <circle cx="256" cy="120" r="45" fill="url(#llamaWool)"/>
+      <circle cx="302" cy="135" r="42" fill="url(#llamaWool)"/>
+      <circle cx="256" cy="200" r="75" fill="url(#llamaWool)"/>
+      <circle cx="256" cy="265" r="62" fill="url(#llamaWool)"/>
+
+      <!-- Copete esponjoso en la frente (fluffy bangs) -->
+      <path d="M 215 130 
+               C 210 100, 240 95, 250 110 
+               C 260 95, 290 100, 290 130 
+               C 280 150, 225 150, 215 130 Z" 
+            fill="#FFFFFF" 
+            stroke="#E8DC melt" 
+            opacity="0.95"/>
+    </g>
+
+    <!-- ================= HOCICO TIERNO ================= -->
+    <ellipse cx="256" cy="238" rx="42" ry="34" fill="url(#llamaSnout)"/>
+    
+    <!-- Naricita y Boquita Feliz -->
+    <!-- Nariz en forma de Y / corazón invertido rosado -->
+    <path d="M 248 222 
+             C 248 217, 252 214, 256 214 
+             C 260 214, 264 217, 264 222 
+             C 264 229, 258 233, 256 234 
+             C 254 233, 248 229, 248 222 Z" 
+          fill="#FF8DA1"/>
+    <!-- Línea vertical del hocico -->
+    <path d="M 256 234 L 256 244" stroke="#5D4037" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Sonrisa tierna de 'w' o '3' -->
+    <path d="M 240 242 Q 248 253 256 244 Q 264 253 272 242" 
+          stroke="#5D4037" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+          fill="none"/>
+
+    <!-- ================= OJITOS DULCES Y FELICES ================= -->
+    <!-- Ojo Izquierdo: Ojo grande brillante súper dulce -->
+    <g id="left-eye-llama">
+      <!-- Ojo semicerrado de felicidad o abierto súper kawaii con pestañitas -->
+      <circle cx="198" cy="205" r="16" fill="#2E1C14"/>
+      <!-- Brillo grande -->
+      <circle cx="193" cy="199" r="6" fill="#FFFFFF"/>
+      <circle cx="204" cy="210" r="3" fill="#FFFFFF"/>
+      <!-- Pestañitas tiernas -->
+      <path d="M 186 195 C 182 188, 178 188, 178 188" stroke="#2E1C14" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M 194 189 C 193 182, 192 182, 192 182" stroke="#2E1C14" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- Ojo Derecho -->
+    <g id="right-eye-llama">
+      <circle cx="314" cy="205" r="16" fill="#2E1C14"/>
+      <circle cx="309" cy="199" r="6" fill="#FFFFFF"/>
+      <circle cx="320" cy="210" r="3" fill="#FFFFFF"/>
+      <!-- Pestañitas tiernas -->
+      <path d="M 326 195 C 330 188, 334 188, 334 188" stroke="#2E1C14" stroke-width="3" stroke-linecap="round" fill="none"/>
+      <path d="M 318 189 C 319 182, 320 182, 320 182" stroke="#2E1C14" stroke-width="3" stroke-linecap="round" fill="none"/>
+    </g>
+
+    <!-- ================= MEJILLAS SONROJADAS ROSADAS ================= -->
+    <ellipse cx="178" cy="235" rx="16" ry="10" fill="#FF8DA1" opacity="0.6"/>
+    <ellipse cx="334" cy="235" rx="16" ry="10" fill="#FF8DA1" opacity="0.6"/>
+    <path d="M 172 235 L 184 235 M 178 229 L 178 241" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+    <path d="M 328 235 L 340 235 M 334 229 L 334 241" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+
+    <!-- ================= CORONA DE FLORES PASTEL ================= -->
+    <g id="flower-crown" transform="translate(0, -5)">
+      <!-- Tallito / Enredadera base -->
+      <path d="M 180 135 Q 256 115 332 135" stroke="#81C784" stroke-width="4" stroke-linecap="round" fill="none"/>
+      
+      <!-- Hojitas verdes menta -->
+      <path d="M 195 130 Q 185 118 190 112 Q 202 120 195 130 Z" fill="#A5D6A7"/>
+      <path d="M 230 120 Q 225 105 235 102 Q 242 112 230 120 Z" fill="#81C784"/>
+      <path d="M 282 120 Q 287 105 277 102 Q 270 112 282 120 Z" fill="#81C784"/>
+      <path d="M 317 130 Q 327 118 322 112 Q 310 120 317 130 Z" fill="#A5D6A7"/>
+
+      <!-- Flor 1: Rosa Pastel (Izquierda) -->
+      <g transform="translate(195, 133)">
+        <circle cx="0" cy="0" r="14" fill="url(#flowerPink)"/>
+        <circle cx="0" cy="0" r="10" fill="#FFB7C5"/>
+        <circle cx="0" cy="0" r="6" fill="#FF4081"/>
+        <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+      </g>
+
+      <!-- Flor 2: Lavanda Dulce (Centro-Izquierda) -->
+      <g transform="translate(230, 118)">
+        <!-- Pétalos -->
+        <circle cx="-7" cy="-4" r="6" fill="url(#flowerLavender)"/>
+        <circle cx="7" cy="-4" r="6" fill="url(#flowerLavender)"/>
+        <circle cx="0" cy="-9" r="6" fill="url(#flowerLavender)"/>
+        <circle cx="-5" cy="5" r="6" fill="url(#flowerLavender)"/>
+        <circle cx="5" cy="5" r="6" fill="url(#flowerLavender)"/>
+        <circle cx="0" cy="0" r="5" fill="#FFE082"/>
+      </g>
+
+      <!-- Flor 3: Flor Principal Grande Rosa / Durazno (Centro) -->
+      <g transform="translate(256, 112)">
+        <circle cx="-10" cy="-5" r="9" fill="#FFAB91"/>
+        <circle cx="10" cy="-5" r="9" fill="#FFAB91"/>
+        <circle cx="0" cy="-12" r="9" fill="#FF8A80"/>
+        <circle cx="-7" cy="8" r="9" fill="#FFAB91"/>
+        <circle cx="7" cy="8" r="9" fill="#FFAB91"/>
+        <circle cx="0" cy="0" r="8" fill="#FFF59D"/>
+        <circle cx="0" cy="0" r="4" fill="#FFD54F"/>
+        <!-- Destellito central -->
+        <circle cx="-2" cy="-2" r="1.5" fill="#FFFFFF"/>
+      </g>
+
+      <!-- Flor 4: Girasol / Margarita Amarilla Pastel (Centro-Derecha) -->
+      <g transform="translate(282, 118)">
+        <circle cx="-7" cy="-4" r="6" fill="url(#flowerYellow)"/>
+        <circle cx="7" cy="-4" r="6" fill="url(#flowerYellow)"/>
+        <circle cx="0" cy="-9" r="6" fill="url(#flowerYellow)"/>
+        <circle cx="-5" cy="5" r="6" fill="url(#flowerYellow)"/>
+        <circle cx="5" cy="5" r="6" fill="url(#flowerYellow)"/>
+        <circle cx="0" cy="0" r="5.5" fill="#FF8A65"/>
+      </g>
+
+      <!-- Flor 5: Hortensia Menta / Azul Cielo (Derecha) -->
+      <g transform="translate(317, 133)">
+        <circle cx="0" cy="0" r="14" fill="#80DEEA"/>
+        <circle cx="0" cy="0" r="10" fill="#B2EBF2"/>
+        <circle cx="0" cy="0" r="6" fill="#00BCD4"/>
+        <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+      </g>
+    </g>
+
+    <!-- Etiqueta 'ABRIL' en estilo Ribbon Kawaii -->
+    <g id="badge-abril" transform="translate(256, 465)">
+      <rect x="-55" y="-14" width="110" height="26" rx="13" fill="#B39DDB" stroke="#FFFFFF" stroke-width="3"/>
+      <text x="0" y="4" font-family="'Quicksand', 'Nunito', 'Segoe UI', sans-serif" font-size="14" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">ABRIL</text>
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,1147 @@
+/* ==========================================================================
+   CERCA A PESAR DE LA DISTANCIA - Mobile-First Romantic Stylesheet
+   Dedicado con amor para Ali de Simón ❤️
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES & RESET
+   -------------------------------------------------------------------------- */
+:root {
+  /* Paleta Romántica Pastel */
+  --rose-primary: #FF6B8B;
+  --rose-hover: #E8436E;
+  --rose-light: #FFB7C5;
+  --rose-soft: #FFD1DC;
+  --rose-surface: #FFF0F3;
+  --rose-cream: #FFF9FB;
+  --snow-white: #FFFFFF;
+  --lavender: #E6E6FA;
+  --lavender-deep: #9333EA;
+  --gold-soft: #FFD700;
+  --gold-warm: #F59E0B;
+  
+  /* Tipografía y sombras */
+  --text-main: #4A1525;
+  --text-muted: #8B4A5E;
+  --text-light: #B87D8E;
+  --shadow-soft: 0 8px 24px rgba(255, 107, 139, 0.14);
+  --shadow-hover: 0 12px 32px rgba(255, 107, 139, 0.25);
+  --shadow-glass: 0 8px 32px 0 rgba(232, 67, 110, 0.12);
+  
+  /* Bordes & Glassmorphism */
+  --radius-sm: 14px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+  --glass-bg: rgba(255, 255, 255, 0.82);
+  --glass-border: rgba(255, 255, 255, 0.9);
+
+  /* Transiciones */
+  --transition-smooth: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-bounce: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Comic Neue", "Quicksand", sans-serif;
+  background: linear-gradient(180deg, #FFF0F3 0%, #FFE5EC 40%, #FFF5F7 80%, #FFF0F3 100%);
+  color: var(--text-main);
+  min-height: 100vh;
+  line-height: 1.5;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Fondo de destellos y corazones ambientales */
+.ambient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 183, 197, 0.3) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(230, 230, 250, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(255, 240, 243, 0.5) 0%, transparent 60%);
+  opacity: 0.9;
+}
+
+/* Contenedor Principal Mobile-First */
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 16px 16px 100px 16px;
+  position: relative;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   2. HERO HEADER ROMÁNTICO
+   -------------------------------------------------------------------------- */
+.hero-header {
+  text-align: center;
+  padding: 24px 16px 16px 16px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass);
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+  animation: pulse-glow 6s infinite alternate ease-in-out;
+}
+
+.hero-badge-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, #FFE5EC, #FFF0F3);
+  border: 1px dashed var(--rose-light);
+  color: var(--rose-hover);
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(255, 107, 139, 0.1);
+}
+
+.hero-title {
+  font-size: 1.95rem;
+  font-weight: 800;
+  color: var(--rose-hover);
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero-title .heart-beat {
+  display: inline-block;
+  animation: heart-pulse 1.4s infinite ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.hero-dedication-tag {
+  display: inline-block;
+  background: rgba(255, 107, 139, 0.12);
+  color: var(--rose-hover);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.hero-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   3. AVATAR FLOTANTE & STICKERS DE ALIS Y ABRIL
+   -------------------------------------------------------------------------- */
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 10px 0 16px 0;
+}
+
+.avatar-wrapper {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 100%);
+  padding: 5px;
+  box-shadow: 0 10px 25px rgba(255, 107, 139, 0.35);
+  animation: float 4s infinite ease-in-out;
+  cursor: pointer;
+}
+
+.avatar-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 3px solid #FFFFFF;
+}
+
+.avatar-svg {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.avatar-crown {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-5deg);
+  font-size: 2rem;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+  animation: crown-wobble 3s infinite ease-in-out;
+}
+
+.stickers-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.sticker-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #FFFFFF;
+  border: 2px solid;
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  user-select: none;
+}
+
+.sticker-badge:hover, .sticker-badge:active {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 8px 16px rgba(255, 107, 139, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   4. BARRA DE PROGRESO ROMÁNTICA
+   -------------------------------------------------------------------------- */
+.love-progress-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.progress-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-main);
+}
+
+.progress-count {
+  color: var(--rose-hover);
+  background: var(--rose-surface);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 12px;
+  background: #FFE5EC;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #FF6B8B, #FF8FA3, #F43F5E);
+  border-radius: var(--radius-full);
+  transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.progress-footer-text {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   5. FRASES FLOTANTES INTERACTIVAS
+   -------------------------------------------------------------------------- */
+.floating-phrases-section {
+  margin-bottom: 20px;
+}
+
+.floating-phrases-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 8px;
+  padding: 6px 4px 10px 4px;
+  scrollbar-width: none; /* Firefox */
+  -webkit-overflow-scrolling: touch;
+}
+
+.floating-phrases-scroll::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.floating-phrase-pill {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1.5px solid var(--rose-soft);
+  border-radius: var(--radius-full);
+  padding: 8px 14px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text-main);
+  box-shadow: 0 3px 8px rgba(255, 107, 139, 0.12);
+  cursor: pointer;
+  transition: var(--transition-bounce);
+  animation: float-slow 4s infinite ease-in-out;
+}
+
+.floating-phrase-pill:hover, .floating-phrase-pill:active {
+  transform: scale(1.05) translateY(-2px);
+  background: var(--rose-surface);
+  border-color: var(--rose-primary);
+  color: var(--rose-hover);
+  box-shadow: 0 6px 14px rgba(255, 107, 139, 0.22);
+}
+
+/* --------------------------------------------------------------------------
+   6. BOTÓN CARPETA MADRE DE DRIVE
+   -------------------------------------------------------------------------- */
+.master-drive-banner {
+  margin-bottom: 20px;
+}
+
+.btn-master-drive {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: linear-gradient(135deg, #FF6B8B 0%, #F43F5E 100%);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 20px rgba(244, 63, 94, 0.35);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: var(--transition-bounce);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-master-drive:hover, .btn-master-drive:active {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(244, 63, 94, 0.45);
+}
+
+.master-drive-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.master-drive-icon {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}
+
+.master-drive-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.master-drive-text strong {
+  font-size: 0.95rem;
+}
+
+.master-drive-text small {
+  font-size: 0.78rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   7. GRID VERTICAL DE 7 TARJETAS DIARIAS
+   -------------------------------------------------------------------------- */
+.days-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.section-title-wrap {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.section-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.section-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.days-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Tarjeta de Día */
+.day-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 18px 16px;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.day-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.day-card.unlocked {
+  border-color: rgba(255, 107, 139, 0.4);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 240, 243, 0.85) 100%);
+}
+
+.day-card.unlocked::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(180deg, #FF6B8B, #F43F5E);
+  border-radius: var(--radius-full);
+}
+
+.day-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.day-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.day-icon {
+  font-size: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.day-label {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.day-status-pill {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.status-locked {
+  background: #F3F4F6;
+  color: #6B7280;
+  border: 1px solid #E5E7EB;
+}
+
+.status-unlocked {
+  background: #DCFCE7;
+  color: #15803D;
+  border: 1px solid #86EFAC;
+}
+
+.day-card-body {
+  margin-bottom: 14px;
+}
+
+.day-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+
+.day-subtitle {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  margin-bottom: 10px;
+}
+
+.day-perks-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.perk-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: #FFFFFF;
+  border: 1px solid var(--rose-soft);
+  color: var(--rose-hover);
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+}
+
+.day-card-footer {
+  margin-top: 6px;
+}
+
+/* Botones en tarjetas */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-bounce);
+  text-decoration: none;
+}
+
+.btn-unlock {
+  background: linear-gradient(135deg, #FFE5EC 0%, #FFF0F3 100%);
+  color: var(--rose-hover);
+  border: 1.5px solid var(--rose-light);
+  box-shadow: 0 4px 12px rgba(255, 107, 139, 0.15);
+}
+
+.btn-unlock:hover, .btn-unlock:active {
+  background: linear-gradient(135deg, #FF6B8B 0%, #F43F5E 100%);
+  color: #FFFFFF;
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(244, 63, 94, 0.3);
+}
+
+.action-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #FF6B8B 0%, #F43F5E 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(244, 63, 94, 0.25);
+}
+
+.btn-primary:hover, .btn-primary:active {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(244, 63, 94, 0.35);
+}
+
+.btn-secondary {
+  background: #FFFFFF;
+  color: var(--text-main);
+  border: 1.5px solid #E5E7EB;
+}
+
+.btn-secondary:hover, .btn-secondary:active {
+  background: #F9FAFB;
+  border-color: var(--rose-light);
+  color: var(--rose-hover);
+}
+
+/* --------------------------------------------------------------------------
+   8. REPRODUCTOR DE MÚSICA FLOTANTE
+   -------------------------------------------------------------------------- */
+.floating-music-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 2px solid var(--rose-light);
+  border-radius: var(--radius-full);
+  padding: 8px 14px 8px 8px;
+  box-shadow: 0 10px 30px rgba(255, 107, 139, 0.35);
+  transition: var(--transition-bounce);
+}
+
+.floating-music-widget.playing {
+  border-color: var(--rose-primary);
+  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.45);
+  animation: pulse-music 2.5s infinite ease-in-out;
+}
+
+.music-play-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF6B8B, #F43F5E);
+  color: #FFFFFF;
+  border: none;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(244, 63, 94, 0.3);
+  transition: var(--transition-bounce);
+}
+
+.music-play-circle:hover, .music-play-circle:active {
+  transform: scale(1.1);
+}
+
+.music-info {
+  display: flex;
+  flex-direction: column;
+  max-width: 140px;
+}
+
+.music-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.music-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.volume-slider {
+  width: 70px;
+  height: 4px;
+  border-radius: 2px;
+  accent-color: var(--rose-primary);
+  cursor: pointer;
+}
+
+.music-equalizer {
+  display: none;
+  align-items: flex-end;
+  gap: 2px;
+  height: 14px;
+}
+
+.eq-bar {
+  width: 3px;
+  background: var(--rose-primary);
+  border-radius: 2px;
+  animation: equalizerBar 0.8s infinite ease-in-out alternate;
+}
+
+.eq-bar:nth-child(1) { height: 60%; animation-delay: 0.1s; }
+.eq-bar:nth-child(2) { height: 100%; animation-delay: 0.3s; }
+.eq-bar:nth-child(3) { height: 40%; animation-delay: 0.2s; }
+
+/* --------------------------------------------------------------------------
+   9. MODALES TERNURA (CONTRASEÑA Y CONTENIDO)
+   -------------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(45, 10, 20, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 420px;
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 24px 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transform: scale(0.9) translateY(20px);
+  transition: var(--transition-bounce);
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 2px solid var(--rose-soft);
+}
+
+.modal-overlay.active .modal-card {
+  transform: scale(1) translateY(0);
+}
+
+.modal-close-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--rose-surface);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-bounce);
+}
+
+.modal-close-icon:hover {
+  background: var(--rose-soft);
+  color: var(--rose-hover);
+  transform: rotate(90deg);
+}
+
+.modal-header-center {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.modal-icon-badge {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFE5EC, #FFF0F3);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px auto;
+  box-shadow: 0 6px 16px rgba(255, 107, 139, 0.2);
+}
+
+.modal-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.modal-subtitle {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
+/* Formulario de Contraseña */
+.password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input {
+  width: 100%;
+  padding: 14px 48px 14px 16px;
+  border: 2px solid var(--rose-light);
+  border-radius: var(--radius-md);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: var(--rose-surface);
+  outline: none;
+  transition: var(--transition-smooth);
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.password-input:focus {
+  border-color: var(--rose-hover);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(255, 107, 139, 0.2);
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hint-section {
+  text-align: center;
+}
+
+.hint-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--rose-hover);
+  font-size: 0.84rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hint-box {
+  display: none;
+  background: #FFF9E6;
+  border: 1px dashed #F59E0B;
+  color: #92400E;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.84rem;
+  font-weight: 600;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* Teclado en pantalla / accesos rápidos */
+.quick-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.keypad-btn {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: var(--transition-bounce);
+}
+
+.keypad-btn:active {
+  background: var(--rose-light);
+  transform: scale(0.95);
+}
+
+.password-feedback {
+  min-height: 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.password-feedback.error {
+  color: #DC2626;
+}
+
+.password-feedback.success {
+  color: #16A34A;
+}
+
+/* Modal de Carta Desbloqueada */
+.letter-content-box {
+  background: #FFFDF9;
+  border: 2px dashed var(--rose-light);
+  border-radius: var(--radius-md);
+  padding: 18px 16px;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.letter-content-box p {
+  margin-bottom: 12px;
+}
+
+.letter-content-box p:last-child {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: var(--rose-hover);
+}
+
+.modal-action-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-drive-large {
+  background: linear-gradient(135deg, #FF6B8B 0%, #F43F5E 100%);
+  color: #FFFFFF;
+  padding: 14px;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(244, 63, 94, 0.35);
+}
+
+.btn-relock {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   10. TOAST & PARTICULAS FLOTANTES
+   -------------------------------------------------------------------------- */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  pointer-events: none;
+  width: 90%;
+  max-width: 380px;
+}
+
+.toast-pill {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid var(--rose-primary);
+  border-radius: var(--radius-full);
+  padding: 10px 18px;
+  box-shadow: 0 10px 25px rgba(255, 107, 139, 0.35);
+  color: var(--text-main);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-20px) scale(0.9);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.toast-pill.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.toast-pill.toast-love {
+  border-color: var(--rose-hover);
+  color: var(--rose-hover);
+}
+
+.floating-heart-particle {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  user-select: none;
+  animation: particleFloat 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* --------------------------------------------------------------------------
+   11. FOOTER ROMÁNTICO
+   -------------------------------------------------------------------------- */
+.app-footer {
+  text-align: center;
+  padding: 24px 16px 40px 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer-heart {
+  color: var(--rose-hover);
+  display: inline-block;
+  animation: heart-pulse 1.2s infinite ease-in-out;
+}
+
+/* --------------------------------------------------------------------------
+   12. ANIMACIONES CSS
+   -------------------------------------------------------------------------- */
+@keyframes heart-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.22); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+@keyframes crown-wobble {
+  0%, 100% { transform: translateX(-50%) rotate(-5deg); }
+  50% { transform: translateX(-50%) rotate(5deg) translateY(-3px); }
+}
+
+@keyframes pulse-glow {
+  0% { transform: scale(0.98); opacity: 0.5; }
+  100% { transform: scale(1.02); opacity: 0.85; }
+}
+
+@keyframes pulse-music {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+@keyframes equalizerBar {
+  0% { height: 20%; }
+  100% { height: 100%; }
+}
+
+@keyframes particleFloat {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(0.8) rotate(0deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) scale(1.4) rotate(20deg);
+  }
+}
+
+/* Shake de error */
+.shake {
+  animation: shakeAnimation 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shakeAnimation {
+  10%, 90% { transform: translate3d(-2px, 0, 0); }
+  20%, 80% { transform: translate3d(4px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+  40%, 60% { transform: translate3d(6px, 0, 0); }
+}
+
+/* --------------------------------------------------------------------------
+   13. MEDIA QUERIES (TABLET & DESKTOP)
+   -------------------------------------------------------------------------- */
+@media (min-width: 600px) {
+  .app-container {
+    max-width: 540px;
+    padding-top: 32px;
+  }
+
+  .hero-title {
+    font-size: 2.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .app-container {
+    max-width: 580px;
+  }
+}
