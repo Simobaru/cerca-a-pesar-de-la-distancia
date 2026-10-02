@@ -341,21 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Teclado virtual / Botones rápidos en el modal
-  const keypadButtons = document.querySelectorAll(".keypad-btn");
-  keypadButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const key = btn.getAttribute("data-key");
-      if (key === "backspace") {
-        pwInput.value = pwInput.value.slice(0, -1);
-      } else if (key === "clear") {
-        pwInput.value = "";
-      } else if (key) {
-        pwInput.value += key;
-      }
-      pwInput.focus();
-    });
-  });
+
 
   // Verificación de contraseña
   function verifyPassword() {
