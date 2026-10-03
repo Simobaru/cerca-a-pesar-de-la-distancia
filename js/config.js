@@ -117,7 +117,7 @@ const CONFIG = {
     {
       id: 7,
       dayNumber: 7,
-      title: "Día 7: Por Fin Juntos Otra Vez",
+      title: "Día 7: Ya casi, ya casi",
       subtitle: "El amor todo lo puede y todo lo supera",
       icon: "🎉",
       coverEmoji: "🏆",
